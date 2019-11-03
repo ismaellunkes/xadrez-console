@@ -53,7 +53,7 @@ namespace Xadrez_Console.tabuleiro
             return peca(pos) != null;
         }
 
-        private bool posicaoValida(Posicao pos)
+        public bool posicaoValida(Posicao pos)
         {
             if (pos.Linha < 0 || pos.Linha >= Linhas || pos.Coluna < 0 || pos.Coluna >= Colunas)
             {
