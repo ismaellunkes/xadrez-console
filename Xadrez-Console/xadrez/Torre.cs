@@ -27,7 +27,7 @@ namespace Xadrez_Console.xadrez
             while (Tabuleiro.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.peca(pos) != null && Tabuleiro.peca(pos).Cor != this.Cor)
+                if (Tabuleiro.peca(pos) != null && Tabuleiro.peca(pos).Cor != Cor)
                 {
                     break;
                 }
@@ -35,11 +35,11 @@ namespace Xadrez_Console.xadrez
             }
 
             //abaixo
-            pos.definirValores(Posicao.Linha - 1, Posicao.Coluna);
+            pos.definirValores(Posicao.Linha + 1, Posicao.Coluna);
             while (Tabuleiro.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.peca(pos) != null && Tabuleiro.peca(pos).Cor != this.Cor)
+                if (Tabuleiro.peca(pos) != null && Tabuleiro.peca(pos).Cor != Cor)
                 {
                     break;
                 }
@@ -47,11 +47,11 @@ namespace Xadrez_Console.xadrez
             }
 
             //direita
-            pos.definirValores(Posicao.Linha - 1, Posicao.Coluna);
+            pos.definirValores(Posicao.Linha, Posicao.Coluna+1);
             while (Tabuleiro.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.peca(pos) != null && Tabuleiro.peca(pos).Cor != this.Cor)
+                if (Tabuleiro.peca(pos) != null && Tabuleiro.peca(pos).Cor != Cor)
                 {
                     break;
                 }
@@ -59,11 +59,11 @@ namespace Xadrez_Console.xadrez
             }
 
             //esquerda
-            pos.definirValores(Posicao.Linha - 1, Posicao.Coluna);
+            pos.definirValores(Posicao.Linha, Posicao.Coluna-1);
             while (Tabuleiro.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.peca(pos) != null && Tabuleiro.peca(pos).Cor != this.Cor)
+                if (Tabuleiro.peca(pos) != null && Tabuleiro.peca(pos).Cor != Cor)
                 {
                     break;
                 }
