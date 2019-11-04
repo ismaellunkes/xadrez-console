@@ -7,7 +7,6 @@
         public int QtdeMovimentos { get; protected set; }
         public Tabuleiro Tabuleiro { get; protected set; }
 
-
         public Peca(Tabuleiro tabuleiro, Cor cor)
         {
             Posicao = null;
@@ -19,6 +18,11 @@
         public void incrementarQtdeMovimentos()
         {
             QtdeMovimentos++;
+        }
+
+        public void decrementarQtdeMovimentos()
+        {
+            QtdeMovimentos--;
         }
 
         public bool existeMovimentosPossiveis()
@@ -37,7 +41,7 @@
             return false;
         }
 
-        public bool podeMoverPara(Posicao pos)
+        public bool movimentoPossivel(Posicao pos)
         {
             return movimentosPossiveis()[pos.Linha, pos.Coluna];
         }
